@@ -1,0 +1,42 @@
+ TS-MIB DEFINITIONS ::= BEGIN
+
+
+   IMPORTS
+       MODULE-IDENTITY, OBJECT-TYPE,
+       Counter32, Gauge32,
+       NOTIFICATION-TYPE,
+       enterprises, Unsigned32           FROM SNMPv2-SMI
+       MODULE-COMPLIANCE, OBJECT-GROUP,
+       NOTIFICATION-GROUP                FROM SNMPv2-CONF
+       ;
+   tsEventTrapMIB MODULE-IDENTITY
+
+   LAST-UPDATED "202212260000Z"
+
+   ORGANIZATION "ThoughtSpot Inc."
+   CONTACT-INFO "ThoughtSpot Inc.""
+   DESCRIPTION "The format of SNMP traps that may be generated as TS alerts."
+
+   ::= { tsalertmibs 1 }
+
+   tsalert OBJECT IDENTIFIER ::= { enterprises 1593 }
+   tsalertmibs OBJECT IDENTIFIER ::= { tsalert 1 }
+
+   -- Variables in each trap (as id/value bindings) 
+
+   tsEventMibObjects OBJECT IDENTIFIER ::= { tsEventTrapMIB 1 }
+
+   DisplayString ::= OCTET STRING
+
+   eventText OBJECT-TYPE
+     SYNTAX      DisplayString
+     MAX-ACCESS  accessible-for-notify
+     STATUS      current
+     DESCRIPTION "The code of a TS-raised event"
+
+   ::= { tsEventMibObjects 1 }
+
+
+END
+
+
