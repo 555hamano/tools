@@ -1,0 +1,333 @@
+{
+  "interval_time": 5,
+  "target_ip": "",
+  "target_com": "public",
+  "target_oid": ".1.3.6.1.4.1.1234.1.1.1.1",
+  "alert_list": {
+    "A00001": {
+      "id": "TASK_TERMINATED",
+      "msg": "Task {{.Service}}.{{.Task}} terminated on machine {{.Machine}}",
+      "isEnabled": true
+    },
+    "A00002": {
+      "id": "SERVICE_UNIT_ERROR",
+      "msg": "Service {{.Service}} is in error state on machine {{.Machine}}",
+      "isEnabled": true
+    },
+    "A00003": {
+      "id": "DISK_SPACE",
+      "msg": "Machine {{.Machine}} has less than {{.Perc}}%!d(MISSING)isk space free",
+      "isEnabled": true
+    },
+    "A00004": {
+      "id": "MEMORY",
+      "msg": "Deviation from OS memory across cluster nodes",
+      "isEnabled": true
+    },
+    "A00005": {
+      "id": "OS_USERS",
+      "msg": "Machine {{.Machine}} has more than {{.Num}} logged in users",
+      "isEnabled": true
+    },
+    "A00006": {
+      "id": "OS_PROCS",
+      "msg": "Machine {{.Machine}} has more than {{.Num}} processes",
+      "isEnabled": true
+    },
+    "A00008": {
+      "id": "SSH",
+      "msg": "Machine {{.Machine}} doesn't have an active SSH server",
+      "isEnabled": true
+    },
+    "A00010": {
+      "id": "ZK_EPHEMERAL_COUNT",
+      "msg": "Zookeeper has more than {{.Num}} ephemeral files",
+      "isEnabled": true
+    },
+    "A00011": {
+      "id": "ZK_AVG_LATENCY",
+      "msg": "Average Zookeeper latency is more than {{.Num}} msec",
+      "isEnabled": true
+    },
+    "A00012": {
+      "id": "ZK_MAX_LATENCY",
+      "msg": "Max Zookeeper latency is more than {{.Num}} msec",
+      "isEnabled": true
+    },
+    "A00013": {
+      "id": "ZK_MIN_LATENCY",
+      "msg": "Min Zookeeper latency is more than {{.Num}} msec",
+      "isEnabled": true
+    },
+    "A00014": {
+      "id": "ZK_OUTSTANDING_REQUESTS",
+      "msg": "Number of outstanding Zookeeper requests exceeds {{.Num}}",
+      "isEnabled": true
+    },
+    "A00015": {
+      "id": "ZK_NUM_WATCHERS",
+      "msg": "Number of Zookeeper watchers exceeds {{.Num}}",
+      "isEnabled": true
+    },
+    "A00016": {
+      "id": "HOST_DOWN",
+      "msg": "{{.Machine}} is down",
+      "isEnabled": true
+    },
+    "A00017": {
+      "id": "TASK_UNREACHABLE",
+      "msg": "{{.ServiceDesc}} on {{.Machine}} is unreachable over HTTP",
+      "isEnabled": true
+    },
+    "A00018": {
+      "id": "TASK_NOT_RUNNING",
+      "msg": "{{.ServiceDesc}} is not running",
+      "isEnabled": true
+    },
+    "A00019": {
+      "id": "DISK_ERROR",
+      "msg": "Machine {{.Machine}} has disk errors",
+      "isEnabled": true
+    },
+    "A00020": {
+      "id": "MASTER_ELECTION",
+      "msg": "{{.Machine}} elected as Orion Master",
+      "isEnabled": true
+    },
+    "A00021": {
+      "id": "PERIODIC_BACKUP",
+      "msg": "{{.Process}} periodic backup for policy {{.Name}} failed.",
+      "isEnabled": true
+    },
+    "A00022": {
+      "id": "OREO_TERMINATED",
+      "msg": "Oreo terminated on machine {{.Machine}}",
+      "isEnabled": true
+    },
+    "A00023": {
+      "id": "ZK_INACCESSIBLE",
+      "msg": "Zookeeper is not accessible",
+      "isEnabled": true
+    },
+    "A00024": {
+      "id": "HDFS_CORRUPTION",
+      "msg": "HDFS root directory is in a corrupted state.",
+      "isEnabled": true
+    },
+    "A00025": {
+      "id": "TASK_FLAPPING",
+      "msg": "Task {{.Service}}.{{.Task}} terminated {{._actual_num_occurrences}} times in last {{._earliest_duration_str}}",
+      "isEnabled": true
+    },
+    "A00026": {
+      "id": "APPLICATION_INVALID_STATE",
+      "msg": "{{.Service}}.{{.Task}} on {{.Machine}} at location {{.Location}}",
+      "isEnabled": true
+    },
+    "A00027": {
+      "id": "APPLICATION_INVALID_STATE_EXTERNAL",
+      "msg": "{{.Service}}.{{.Task}} on {{.Machine}} at location {{.Location}}",
+      "isEnabled": true
+    },
+    "A00028": {
+      "id": "PERIODIC_SNAPSHOT",
+      "msg": "{{.Process}} periodic snapshot {{.Name}} failed.",
+      "isEnabled": true
+    },
+    "A00029": {
+      "id": "PERIODIC_BACKUP_FLAPPING",
+      "msg": "Periodic backup failed {{._actual_num_occurrences}} times in last {{._earliest_duration_str}}",
+      "isEnabled": true
+    },
+    "A00030": {
+      "id": "DISK_ERROR_EXTERNAL",
+      "msg": "Machine {{.Machine}} has disk errors",
+      "isEnabled": true
+    },
+    "A00031": {
+      "id": "PERIODIC_SNAPSHOT_FLAPPING",
+      "msg": "Periodic snapshot failed {{._actual_num_occurrences}} times in last {{._earliest_duration_str}}",
+      "isEnabled": true
+    },
+    "A00032": {
+      "id": "UPDATE_START",
+      "msg": "Starting update of ThoughtSpot cluster {{.Cluster}}",
+      "isEnabled": true
+    },
+    "A00033": {
+      "id": "UPDATE_END",
+      "msg": "Finished update of ThoughtSpot cluster {{.Cluster}} to release {{.Release}}",
+      "isEnabled": true
+    },
+    "A00034": {
+      "id": "PACKS_MISSING",
+      "msg": "Service packs are missing from Persistent Filesystem.",
+      "isEnabled": true
+    },
+    "A00040": {
+      "id": "SERVICE_LOAD_ERROR",
+      "msg": "{{.Service}} load failed",
+      "isEnabled": true
+    },
+    "A00300": {
+      "id": "ROOT_DISK_SPACE",
+      "msg": "Machine {{.Machine}} has less than {{.Perc}}%!d(MISSING)isk space free on root partition",
+      "isEnabled": true
+    },
+    "A00301": {
+      "id": "HDFS_NAMENODE_DISK_SPACE",
+      "msg": "Machine {{.Machine}} has less than {{.Perc}}%!d(MISSING)isk space free on HDFS namenode drive",
+      "isEnabled": true
+    },
+    "A00302": {
+      "id": "HDFS_DISK_SPACE",
+      "msg": "HDFS has less than {{.Perc}}%!s(MISSING)pace free",
+      "isEnabled": true
+    },
+    "A00303": {
+      "id": "TIMELY_ERROR",
+      "msg": "Job manager {{.Message}}",
+      "isEnabled": true
+    },
+    "A00304": {
+      "id": "TIMELY_JOB_RUN_ERROR",
+      "msg": "Job run {{.Message}}",
+      "isEnabled": true
+    },
+    "A00305": {
+      "id": "BOOT_DISK_SPACE",
+      "msg": "Machine {{.Machine}} has less than {{.Perc}}%!d(MISSING)isk space free on boot partition",
+      "isEnabled": true
+    },
+    "A00306": {
+      "id": "UPDATE_DISK_SPACE",
+      "msg": "Machine {{.Machine}} has less than {{.Perc}}%!d(MISSING)isk space free on update partition",
+      "isEnabled": true
+    },
+    "A00307": {
+      "id": "EXPORT_DISK_SPACE",
+      "msg": "Machine {{.Machine}} has less than {{.Perc}}%!d(MISSING)isk space free on export partition",
+      "isEnabled": true
+    },
+    "A00308": {
+      "id": "INFLUXDB_NOT_REACHABLE",
+      "msg": "Telegraf Unable to post {{.Message}}",
+      "isEnabled": true
+    },
+    "A00309": {
+      "id": "NTPD",
+      "msg": "Machine {{.Machine}} is not in sync with the NTP server.",
+      "isEnabled": true
+    },
+    "A00310": {
+      "id": "TIMEZONE",
+      "msg": "Timezone check failed on Machine {{.Machine}}",
+      "isEnabled": true
+    },
+    "A00311": {
+      "id": "ORION_OREO",
+      "msg": "ORION-OREO is not running on Machine {{.Machine}}",
+      "isEnabled": true
+    },
+    "A00312": {
+      "id": "ORION_CGROUPS",
+      "msg": "ORION-CGROUPS is not running on Machine {{.Machine}}",
+      "isEnabled": true
+    },
+    "A00313": {
+      "id": "SSL_CERT_EXPIRE_DEADLINE",
+      "msg": "SSL certificate will expire within {{.Deadline}} days on {{.Expiration}}",
+      "isEnabled": true
+    },
+    "A00314": {
+      "id": "SSL_CERT_EXPIRED",
+      "msg": "SSL certificate has expired on {{.Expiration}}",
+      "isEnabled": true
+    },
+    "A00315": {
+      "id": "POSTGRES",
+      "msg": "Postgres is corrupted on Machine {{.Machine}}",
+      "isEnabled": true
+    },
+    "A00316": {
+      "id": "HDFS",
+      "msg": "HDFS check failed on cluster.",
+      "isEnabled": true
+    },
+    "A00317": {
+      "id": "HDFS_FSIMAGE",
+      "msg": "HDFS fsimage is stale on cluster.",
+      "isEnabled": true
+    },
+    "A00318": {
+      "id": "LARGE_FILE_DIR_CHANGE",
+      "msg": "Large file directory was changed on {{.Machine}}. Previous dir: {{.PrevDir}}, new dir: {{.NewDir}}.",
+      "isEnabled": true
+    },
+    "A00319": {
+      "id": "S3_CONNECTIVITY",
+      "msg": "{{.Machine}} is unable to connect to S3 bucket.",
+      "isEnabled": true
+    },
+    "A00320": {
+      "id": "CASSANDRA",
+      "msg": "Cassandra check failed on cluster",
+      "isEnabled": true
+    },
+    "A00321": {
+      "id": "NGINX",
+      "msg": "Nginx service check failed on cluster",
+      "isEnabled": true
+    },
+    "A00323": {
+      "id": "ADMIN_SERVER",
+      "msg": "Admin-server check failed on cluster",
+      "isEnabled": true
+    },
+    "A00324": {
+      "id": "SNAPSHOT_EXCESS",
+      "msg": "Manual snapshot exceeds threshold on the cluster",
+      "isEnabled": true
+    },
+    "A00325": {
+      "id": "RESOURCE_MONITOR",
+      "msg": "TPA {{.Service}} exceeds {{.Resource}} threshold on machine {{.Machine}}",
+      "isEnabled": true
+    },
+    "A00326": {
+      "id": "HDFS_SERVICE",
+      "msg": "HDFS Service check failed on cluster.",
+      "isEnabled": true
+    },
+    "A00327": {
+      "id": "NAS_MOUNT",
+      "msg": "NAS mount check failed.",
+      "isEnabled": true
+    },
+    "A00328": {
+      "id": "PRICING_ACCESS_LOG",
+      "msg": "Pricing access log check failed on cluster.",
+      "isEnabled": true
+    },
+    "A9999900": {
+      "id": "TEST_ALERT1",
+      "msg": "Do you test you code?",
+      "isEnabled": true
+    },
+    "A9999901": {
+      "id": "TEST_ALERT2",
+      "msg": "Do you test you code?",
+      "isEnabled": true
+    },
+    "A9999902": {
+      "id": "TEST_ALERT3",
+      "msg": "Do you test you code?",
+      "isEnabled": true
+    },
+    "A9999903": {
+      "id": "TEST_ALERT4",
+      "msg": "Do you test you code?",
+      "isEnabled": true
+    }
+  }
+}
