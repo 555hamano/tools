@@ -2,7 +2,7 @@ import subprocess
 import json
 import re
 
-settings_open = open('settings.json', 'r')
+settings_open = open('/home/admin/tsalert/settings.json', 'r')
 settings_load = json.load(settings_open)
 
 interval_time = settings_load["interval_time"]
@@ -23,7 +23,7 @@ def subst(alert_attribute,alert_msg):
   return alert_msg
 
 #アラートを改行で分割してリストに格納
-alert_s_raw = subprocess.run(["tscli alert list --since " + str(interval_time) + "m"],shell=True,stdout=subprocess.PIPE,encoding='utf-8')
+alert_s_raw = subprocess.run(["/usr/local/scaligent/bin/tscli alert list --since " + str(interval_time) + "m"],shell=True,stdout=subprocess.PIPE,encoding='utf-8')
 alert_s_list_raw = alert_s_raw.stdout.splitlines()
 
 #不要行削除
@@ -47,6 +47,13 @@ for alert_s in alert_s_list:
 
 
 #trap送信
+if(len(trap_list)):
+    f = open('/home/admin/tsalert/tsalert.log','w')
+    f.write("snmp trap tool\n")
+    f.close()
 for trap_msg in trap_list:
-    trap_cmd = "snmptrap -v 2c -c " + target_com + " " + target_ip + " '' " + target_oid + " s '" + trap_msg + "'"
+    trap_cmd = "/usr/bin/snmptrap -v 1 -c " + target_com + " " + target_ip + " '' " + target_oid + " s '" + trap_msg + "'"
     subprocess.run([trap_cmd],shell=True)
+    f = open('/home/admin/tsalert/tsalert.log','a')
+    f.write(trap_cmd + "\n")
+    f.close()

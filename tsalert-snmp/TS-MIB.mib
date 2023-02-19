@@ -11,10 +11,10 @@
        ;
    tsEventTrapMIB MODULE-IDENTITY
 
-   LAST-UPDATED "202212260000Z"
+   LAST-UPDATED "202202200000Z"
 
-   ORGANIZATION "ThoughtSpot Inc."
-   CONTACT-INFO "ThoughtSpot Inc.""
+   ORGANIZATION "ThoughtSpot Inc./ Guild Labo Inc."
+   CONTACT-INFO "ThoughtSpot Inc."
    DESCRIPTION "The format of SNMP traps that may be generated as TS alerts."
 
    ::= { tsalertmibs 1 }
